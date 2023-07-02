@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+  <style>
+    img{
+  
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    body {
+      font-family: 'Hanken Grotesk', sans-serif;
+    
+    }
+
+    .main {
+      position: relative;
+      
+      margin: 0;
+      transform: translateY(50%);
+
+      display: flex;
+      justify-content: center;
+      
+    }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      padding-top: 15rem;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    
+
+    .left {
+      background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+      padding: 25px 30px;
+      border-radius: 20px;
+      margin: 0px;
+      color: hsl(0, 0%, 100%);
+      text-align: center;
+
+
+    }
+
+    .left-hedding {
+      padding: 0px 0px 26px 0px;
+      margin: 0px;
+      font-weight: 800;
+    }
+  
+
+    .left-message {
+      text-align: center;
+    }
+
+    .circle {
+      background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+      text-align: center;
+      margin: auto;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    
+    }
+
+    .circle h1 {
+      color: hsl(221, 100%, 96%);
+      padding-top:35%;
+      padding-bottom: 0;
+      margin: 0;
+      font-weight: 800;
+      font-size: 3rem;
+      line-height: 2.5rem;
+    }
+    .outer_circle{
+      padding: 0px 30px;
+    }
+    .circle p {
+      margin: 0px;
+      padding: 0px;
+      font-weight: lighter;
+      color: hsl(221, 100%, 96%);
+      font-size: xx-small;
+    }
+    .grate{
+      font-weight: 800;
+      font-size: 1.3rem;
+    }
+    .left-message {
+
+      font-weight: lighter;
+      color: hsl(221, 100%, 96%);
+      font-size: 0.9rem;
+    }
+    .layout{
+      
+      display: flex;
+      justify-content: center;
+      border-radius: 20px;
+      margin: 0px;
+      padding: 0px;
+      box-shadow:5px 5px 10px 5px  hsl(221, 100%, 96%);
+    }
+    .right{
+      padding: 25px 25px;
+    }
+    .right-hedding{
+      padding: 0px 0px 20px 0px;
+      margin: 0px;
+      font-weight:800;
+      
+
+    }
+    .img-icon-r{
+      color:  hsl(0, 100%, 67%);
+      display: flex;
+      justify-content: space-between;
+      
+      
+    }
+    .summ-inner-r{
+    
+      width: 225px;
+      background-color: hsla(0, 100%, 67%, 0.1);
+      display: flex;
+      justify-content: space-between;
+      border-radius: 5px;
+      align-items: center;
+      margin-bottom: 20px;
+      
+      
+    
+    }
+    .img-icon-m{
+      color:   hsl(39, 100%, 56%);
+      display: flex;
+      justify-content: space-between;
+      
+      
+    }
+    .summ-inner-m{
+    
+      width: 225px;
+      background-color:  hsl(39, 100%, 56%, 0.1);
+      display: flex;
+      justify-content: space-between;
+      border-radius: 5px;
+      align-items: center;
+      margin-bottom: 20px;
+      
+      
+    
+    }
+    .img-icon-v{
+      color:  hsl(166, 100%, 37%);
+      display: flex;
+      justify-content: space-between;
+      
+      
+    }
+    .summ-inner-v{
+    
+      width: 225px;
+      background-color:  hsl(166, 100%, 37%,0.1);
+      display: flex;
+      justify-content: space-between;
+      border-radius: 5px;
+      align-items: center;
+      margin-bottom: 20px;
+      
+      
+    
+    }
+    .img-icon-vi{
+      color:  hsl(234, 85%, 45%);
+      display: flex;
+      justify-content: space-between;
+      
+      
+    }
+    .summ-inner-vi{
+    
+      width: 225px;
+      background-color:  hsl(234, 85%, 45%,0.1);
+      display: flex;
+      justify-content: space-between;
+      border-radius: 5px;
+      align-items: center;
+      margin-bottom: 30px;
+      
+      
+    
+    }
+    .score{
+      padding: 10px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      
+    }
+    .score div{
+      padding: 0px 7px;
+      color:gray;
+    }
+   .countinue{
+    text-align: center;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color:#fff;
+    margin: 40px 0px 10px 0px;
+    padding: 10px 80px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    
+   }
+   .countinue:hover{
+    background-image: linear-gradient(hsl(224, 30%, 27%), hsl(224, 30%, 27%));
+    
+   }
+  </style>
+</head>
+
+<body>
+  
+  <div class="main">
+    <div class="layout">
+    <div class="left">
+      <p class="left-hedding">Your Result</p>
+      <div class="outer_circle">
+      <div class="circle">
+        <h1>76</h1>
+        <p>of 100</p>
+      </div>
+    </div>
+      <p class="grate">Great</p>
+      <p class="left-message">You scored higher than 65% of <br>the people who have taken <br> these tests.</p>
+    </div>
+    <div class="right">
+      <p class="right-hedding">Summary</p>
+      <div class="summ-inner-r">
+        
+        <div class="img-icon-r"><img src="assets/images/icon-reaction.svg"> <div>Reaction</div></div>
+        <div class="score">80<div>/ 100</div></div>
+      </div>
+      
+      <div class="summ-inner-m">
+        
+        <div class="img-icon-m"><img src="assets/images/icon-memory.svg"> <div >Memory</div></div>
+        <div class="score">92<div>/ 100</div></div>
+      </div>
+      
+
+      <div class="summ-inner-v">
+        
+        <div class="img-icon-v"><img src="assets/images/icon-verbal.svg"> <div >Verbal</div></div>
+        <div class="score">61<div>/ 100</div></div>
+      </div>
+      <div class="summ-inner-vi">
+        
+        <div class="img-icon-vi"><img src="assets/images/icon-visual.svg"> <div >Visual</div></div>
+        <div class="score">72<div>/ 100</div></div>
+      </div>
+      
+
+      <a class="countinue" href="#"> Continue</a>
+    </div>
+    </div>
+
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/SCI-COPATH" target="_blank">Jayasankar J P</a>.
+  </div>
+
+</body>
+
+</html>
